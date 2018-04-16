@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+   echo "não tem argumento"
+   exit 1
+fi
+
+echo $1
+
+echo "nao tem argumento"
