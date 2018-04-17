@@ -1,0 +1,57 @@
+#!/bin/bash
+
+source /Users/hack3/.twutil/bin/wp/download.sh
+source /Users/hack3/.twutil/bin/wp/install.sh
+source /Users/hack3/.twutil/bin/wp/clone.sh
+source /Users/hack3/.twutil/bin/wp/custom_post_type.sh
+
+usage()
+{
+    echo "usage: twp [--download]"
+    echo "just download wordpress and create directory"
+    echo "usage: twp [--install]"
+    echo "install wordpress pt_BR and config"
+    echo "usage: twp [--clone]"
+    echo "clone repository in bitbucket"
+    echo "usage: twp [--cpt]"
+    echo "create custom post type"
+}
+
+if [ "$1" = "" ]
+then
+    echo "usage: twp [--download]"
+    echo "just download wordpress and create directory"
+    echo "usage: twp [--install]"
+    echo "install wordpress pt_BR and config"
+    echo "usage: twp [--clone]"
+    echo "clone repository in bitbucket"
+    echo "usage: twp [--cpt]"
+    echo "create custom post type"
+fi
+
+while [ "$1" != "" ]; do
+    case $1 in
+        --download )            download
+                                ;;
+        --install )             install
+                                ;;
+        --clone )               clone
+                                ;;
+        --cpt )                 custom_post_type
+                                ;;
+        -h | --help )           usage
+                                exit
+                                ;;
+        * )                     usage
+                                exit 1
+    esac
+    shift
+done
+
+
+
+
+
+
+
+
