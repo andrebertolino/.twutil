@@ -69,16 +69,16 @@ cpt_write_file()
     function add_admin_caps_${cpt_general_name_slug}()
     {
         \$role = get_role('administrator');
-        \$role->add_cap('read_post_type');
-        \$role->add_cap('read_private_post_types');
-        \$role->add_cap('edit_post_type');
-        \$role->add_cap('edit_post_types');
-        \$role->add_cap('edit_others_post_types');
-        \$role->add_cap('delete_post_type');
-        \$role->add_cap('delete_post_types');
-        \$role->add_cap('delete_others_post_types');
-        \$role->add_cap('publish_post_types');
-        \$role->add_cap('create_post_type');
+        \$role->add_cap('read_${cpt_singular_name_slug}');
+        \$role->add_cap('read_private_${cpt_general_name_slug}');
+        \$role->add_cap('edit_${cpt_singular_name_slug}');
+        \$role->add_cap('edit_${cpt_general_name_slug}');
+        \$role->add_cap('edit_others_${cpt_general_name_slug}');
+        \$role->add_cap('delete_${cpt_singular_name_slug}');
+        \$role->add_cap('delete_${cpt_general_name_slug}');
+        \$role->add_cap('delete_others_${cpt_general_name_slug}');
+        \$role->add_cap('publish_${cpt_general_name_slug}');
+        \$role->add_cap('create_${cpt_singular_name_slug}');
     }
     
 
