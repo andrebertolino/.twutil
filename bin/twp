@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source /Users/hack3/.twutil/bin/wp/download.sh
-source /Users/hack3/.twutil/bin/wp/install.sh
-source /Users/hack3/.twutil/bin/wp/clone.sh
-source /Users/hack3/.twutil/bin/wp/custom_post_type.sh
+source /Users/$USER/.twutil/bin/wp/download.sh
+source /Users/$USER/.twutil/bin/wp/install.sh
+source /Users/$USER/.twutil/bin/wp/clone.sh
+source /Users/$USER/.twutil/bin/wp/custom_post_type.sh
 
 usage()
 {
