@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# source
+# echo $USER
+# or
+# whoami
+# to save these values to a variable, do
+# myvariable=$(whoami)
+
 source /Users/$USER/.twutil/bin/wp/download.sh
 source /Users/$USER/.twutil/bin/wp/install.sh
 source /Users/$USER/.twutil/bin/wp/clone.sh
