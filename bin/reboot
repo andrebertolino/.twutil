@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# source
+# echo $USER
+# or
+# whoami
+# to save these values to a variable, do
+# myvariable=$(whoami)
+
+source /Users/$USER/.twutil/bin/net/net.sh
+
+usage()
+{
+    echo "usage: reboot [--net]"
+    echo "Reinicia o roteador da NET"
+}
+
+if [ "$1" = "" ]
+then
+    echo "usage: reboot [--net]"
+    echo "Reinicia o roteador da NET"
+fi
+
+while [ "$1" != "" ]; do
+    case $1 in
+        --net )                 net
+                                ;;
+        -h | --help )           usage
+                                exit
+                                ;;
+        * )                     usage
+                                exit 1
+    esac
+    shift
+done
+
+
+
+
+
+
+
+
