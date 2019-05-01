@@ -1,11 +1,11 @@
 clone()
 {
-    cd /c/wamp64/www
+    cd $www
     echo ''
     echo -e '\033[01;32mRepositório\033[00;37m'
     read repositorio
 
-    if [ -d /c/wamp64/www/$repositorio ]
+    if [ -d $www/$repositorio ]
     then
         echo -e '\033[01;33mEsse diretório já existe, verifique e tente novamente!\033[00;37m'
         exit
@@ -13,7 +13,7 @@ clone()
         git clone git@bitbucket.org:trinityweb/$repositorio.git && cd $repositorio
     fi
 
-    if [ -d /c/wamp64/www/$repositorio ]
+    if [ -d $www/$repositorio ]
     then
         echo ''
     else
@@ -23,7 +23,7 @@ clone()
         echo -e '\033[01;32mRepositório\033[00;37m'
         read repositorio
 
-        if [ -d /c/wamp64/www/$repositorio ]
+        if [ -d $www/$repositorio ]
         then
             echo -e '\033[01;33mEsse diretório já existe, verifique e tente novamente!\033[00;37m'
             exit
@@ -32,7 +32,7 @@ clone()
         fi
     fi
 
-    if [ -d /c/wamp64/www/$repositorio ]
+    if [ -d $www/$repositorio ]
     then
         echo ''
     else
@@ -41,14 +41,14 @@ clone()
         exit
     fi
 
-    if [ "$PWD" == "/c/wamp64/www/$repositorio" ]
+    if [ "$PWD" == "$www/$repositorio" ]
     then
         wp core download --locale=pt_BR
 
-        rm -rf /c/wamp64/www/$repositorio/wp-content/themes/twentyfifteen
-        rm -rf /c/wamp64/www/$repositorio/wp-content/themes/twentyseventeen
-        rm -rf /c/wamp64/www/$repositorio/wp-content/themes/twentysixteen
-        rm -rf /c/wamp64/www/$repositorio/wp-content/themes/twentynineteen
+        rm -rf $www/$repositorio/wp-content/themes/twentyfifteen
+        rm -rf $www/$repositorio/wp-content/themes/twentyseventeen
+        rm -rf $www/$repositorio/wp-content/themes/twentysixteen
+        rm -rf $www/$repositorio/wp-content/themes/twentynineteen
 
         wp config create --dbname=$repositorio --dbhost="localhost" --dbuser="root"
 

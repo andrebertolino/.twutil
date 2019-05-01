@@ -7,8 +7,12 @@
 # to save these values to a variable, do
 # myvariable=$(whoami)
 
+# usuário
 user="$(whoami)"
-echo $user
+
+# diretório
+www="/c/wamp64/www"
+
 
 source /c/Users/$user/.twutil/bin/wp/download.sh
 source /c/Users/$user/.twutil/bin/wp/install.sh
