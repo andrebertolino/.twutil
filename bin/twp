@@ -11,8 +11,12 @@
 user="$(whoami)"
 
 # diretório
-www="/c/wamp64/www"
-
+if [ "$user" == "hack1" ]
+then
+    www="/c/wamp/www"
+else
+    www="/c/wamp64/www"
+fi
 
 source /c/Users/$user/.twutil/bin/wp/download.sh
 source /c/Users/$user/.twutil/bin/wp/install.sh
