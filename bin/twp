@@ -7,11 +7,14 @@
 # to save these values to a variable, do
 # myvariable=$(whoami)
 
-# usuário
+# usuários
 user="$(whoami)"
+hack1="hack1"
+hack2="hack2"
+hack3="hack3"
 
-# diretório
-if [ "$user" == "hack1" ]
+# teste de diferentes diretórios www
+if [ "$user" == "$hack2" ]
 then
     www="/c/wamp/www"
 else
