@@ -6,7 +6,7 @@ download()
 
     echo ""
 
-    cd ~/www && mkdir $projeto && cd $projeto  
+    cd $www && mkdir $projeto && cd $projeto  
 
     wp core download --locale=pt_BR
 }
