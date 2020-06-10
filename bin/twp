@@ -1,26 +1,7 @@
 #!/bin/bash
 
-# source
-# echo $USER
-# or
-# whoami
-# to save these values to a variable, do
-# myvariable=$(whoami)
-
-# usuários
-user="$(whoami)"
-hack1="hack1"
-hack2="hack2"
-hack3="hack3"
-
-# teste de diferentes diretórios www
-if [ "$user" == "$hack2" ]
-then
-    www="/c/wamp/www"
-else
-    www="/c/wamp64/www"
-fi
-
+# includes
+source /c/Users/$user/.twutil/bin/vars/vars.sh
 source /c/Users/$user/.twutil/bin/wp/download.sh
 source /c/Users/$user/.twutil/bin/wp/install.sh
 source /c/Users/$user/.twutil/bin/wp/clone.sh
