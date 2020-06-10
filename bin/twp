@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Usuário
+user="$(whoami)"
+
 # includes
 source /c/Users/$user/.twutil/bin/vars/vars.sh
 source /c/Users/$user/.twutil/bin/wp/download.sh
