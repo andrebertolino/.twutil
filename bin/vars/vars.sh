@@ -1,3 +1,3 @@
 # GLOBAL
 user="$(whoami)"
-www="/c/wamp/www"
+www="/c/wamp64/www"
