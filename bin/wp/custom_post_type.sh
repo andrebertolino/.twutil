@@ -3,11 +3,11 @@ cpt_config()
     echo ""
     echo -e "\033[01;34mNome do CPT:\033[00;37m"
     read cpt_general_name
-    cpt_general_name_slug="$(echo -n "${cpt_general_name}" | sed -e 's/[^[:alnum:]]/_/g' | iconv -f utf8 -t ascii//TRANSLIT | sed -e 's/[^_[:alnum:]]//g' | tr -s '-' | tr A-Z a-z)"
+    cpt_general_name_slug=$cpt_general_name
     echo ""
     echo -e "\033[01;34mNome do CPT no singular:\033[00;37m"
     read cpt_singular_name
-    cpt_singular_name_slug="$(echo -n "${cpt_singular_name}" | sed -e 's/[^[:alnum:]]/_/g' | iconv -f utf8 -t ascii//TRANSLIT | sed -e 's/[^_[:alnum:]]//g' | tr -s '-' | tr A-Z a-z)"
+    cpt_singular_name_slug=$cpt_singular_name
     echo ""
     echo -e "\033[01;34mEscolha os suportes deste CPT:\033[00;37m"
     echo -e "\033[00;34m'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats')\033[00;37m"
