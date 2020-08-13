@@ -10,7 +10,7 @@ clone()
         echo -e '\033[01;33mEsse diretório já existe, verifique e tente novamente!\033[00;37m'
         exit
     else
-        git clone git@bitbucket.org:trinityweb/$repositorio.git && cd $repositorio
+        git clone https://github.com/agenciatrinity/$repositorio.git && cd $repositorio
     fi
 
     if [ -d $www/$repositorio ]
