@@ -14,10 +14,10 @@ install()
         wp core download --locale=pt_BR
 
         # Configurando wordpress
-        wp core config --dbname=$projeto --dbhost=localhost --dbuser=root --dbpass=
+        wp core config --dbname=$projeto --dbhost=localhost --dbuser=root --dbpass= --dbprefix=tw3_
 
         # Bloco de criação do banco
         wp db create
-        wp core install --url=http://localhost/$projeto --title=$projeto --admin_user=admin --admin_password=root --admin_email=websites@trinityweb.com.br
+        wp core install --url=http://localhost/$projeto --title=$projeto --admin_user=admin --admin_password=root --admin_email=admin@agenciatw.com.br
     fi
 }
