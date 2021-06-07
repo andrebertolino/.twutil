@@ -49,6 +49,8 @@ clone()
         rm -rf $www/$repositorio/wp-content/themes/twentyseventeen
         rm -rf $www/$repositorio/wp-content/themes/twentysixteen
         rm -rf $www/$repositorio/wp-content/themes/twentynineteen
+        rm -rf $www/$repositorio/wp-content/themes/twentytwenty
+        rm -rf $www/$repositorio/wp-content/themes/twentytwentyone
 
         wp config create --dbname=$repositorio --dbhost="localhost" --dbuser="root"
 
